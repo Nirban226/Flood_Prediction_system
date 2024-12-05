@@ -1,4 +1,4 @@
-# Flood_Prediction_system
+Flood Prediction System
 
 A machine learning-based project that predicts the likelihood of floods based on monthly rainfall data and annual rainfall. This system uses a Random Forest Classifier to make predictions and provides a Tkinter-based GUI for user interaction.
 
@@ -7,21 +7,24 @@ Features
 Predict flood occurrences based on rainfall inputs.
 Provides confidence levels for predictions.
 Simple and user-friendly GUI built with Tkinter.
-
 Dataset
+
 We used the Kerala Rainfall Dataset, which contains monthly rainfall data and annual totals for flood prediction.
+
 Dataset: Kerala Rainfall Dataset on Kaggle
 File name: Kerala.csv
 
 Libraries Used
+
 The project utilizes the following Python libraries:
+
 NumPy: For numerical operations.
 Pandas: For data manipulation and preprocessing.
 Matplotlib: For visualizing data and results.
 Seaborn: For enhanced data visualization.
 Scikit-learn: For training the Random Forest Classifier and data scaling.
 Tkinter: For building the graphical user interface.
-Install the required libraries using:
+To install the required libraries, run:
 
 pip install numpy pandas matplotlib seaborn scikit-learn
 How to Run
@@ -38,7 +41,6 @@ Project Structure
 
 floods.ipynb: Jupyter Notebook containing the model, prediction logic, and GUI.
 Kerala.csv: Dataset used for training and prediction.
-
 Model Details
 
 Algorithm Used: Random Forest Classifier
