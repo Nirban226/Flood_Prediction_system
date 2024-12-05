@@ -1,62 +1,78 @@
-Flood Prediction System
+# Flood Prediction System
 
-A machine learning-based project that predicts the likelihood of floods based on monthly rainfall data and annual rainfall. This system uses a Random Forest Classifier to make predictions and provides a Tkinter-based GUI for user interaction.
+## Project Overview
+This project predicts the likelihood of floods based on monthly rainfall data and annual rainfall. By accurately predicting flood occurrences, we aim to improve disaster preparedness and resource allocation, ultimately minimizing damage and saving lives. The project utilizes machine learning and a user-friendly Tkinter-based GUI to make predictions accessible to non-technical users.
 
-Features
+---
 
-Predict flood occurrences based on rainfall inputs.
-Provides confidence levels for predictions.
-Simple and user-friendly GUI built with Tkinter.
-Dataset
+## Problem Statement
+Floods are one of the most frequent and devastating natural disasters, leading to significant loss of life and property. Accurate flood prediction can help mitigate these risks by enabling timely intervention and better disaster management. The main objective of this project is to predict flood occurrences based on monthly rainfall and annual rainfall data using machine learning.
 
-We used the Kerala Rainfall Dataset, which contains monthly rainfall data and annual totals for flood prediction.
+---
 
-Dataset: Kerala Rainfall Dataset on Kaggle
-File name: Kerala.csv
+## Data Collection
+The data used for this project was sourced from:
+- **Kerala Rainfall Dataset**: A dataset containing monthly rainfall data and annual totals for flood prediction.  
+- **Dataset Link**: [Kerala Rainfall Dataset on Kaggle](https://www.kaggle.com/code/mukulthakur177/flood-prediction-model)
 
-Libraries Used
+---
 
-The project utilizes the following Python libraries:
+## Methodology
 
-NumPy: For numerical operations.
-Pandas: For data manipulation and preprocessing.
-Matplotlib: For visualizing data and results.
-Seaborn: For enhanced data visualization.
-Scikit-learn: For training the Random Forest Classifier and data scaling.
-Tkinter: For building the graphical user interface.
-To install the required libraries, run:
+### Data Wrangling
+- Cleaned and preprocessed the dataset to handle missing values.
+- Transformed the target variable (`FLOODS`) into a binary format (1 for "YES", 0 for "NO").
+- Normalized the feature data using a Min-Max Scaler to ensure uniformity.
 
-pip install numpy pandas matplotlib seaborn scikit-learn
-How to Run
+### Exploratory Data Analysis (EDA)
+- Visualized monthly and annual rainfall distributions using histograms.
+- Identified key rainfall months contributing to flood occurrences.
+- Analyzed correlations between rainfall features and flood outcomes.
 
-Clone the repository:
-git clone https://github.com/yourusername/flood-prediction-system.git
-Navigate to the project directory:
-cd flood-prediction-system
-Ensure the dataset (Kerala.csv) is in the same directory as the code.
-Run the Python script:
-python floods.ipynb
-A GUI window will appear. Enter the rainfall data for each month and the annual rainfall, then click "Predict Flood" to see the prediction and confidence level.
-Project Structure
+### Predictive Analysis
+- Implemented a **Random Forest Classifier** to predict flood occurrences.
+- Split the dataset into training (80%) and testing (20%) sets for model evaluation.
+- Hyperparameter tuning was conducted to optimize model performance.
+- Evaluated the model using metrics such as accuracy, recall, and ROC AUC scores.
 
-floods.ipynb: Jupyter Notebook containing the model, prediction logic, and GUI.
-Kerala.csv: Dataset used for training and prediction.
-Model Details
+---
 
-Algorithm Used: Random Forest Classifier
-Training-Test Split: 80% training, 20% testing
-Performance Metrics:
-Accuracy: 87.5%
-Recall: 92.31%
-ROC AUC Score: 87.06%
-How It Works
+## Key Results
+- The **Random Forest Classifier** achieved the following performance metrics:
+  - **Accuracy**: 87.5%
+  - **Recall**: 92.31%
+  - **ROC AUC Score**: 87.06%
+- Monsoon months (**June, July, August, September**) and high annual rainfall were key predictors of floods.
 
-The user enters monthly and annual rainfall data.
-The input data is normalized using a Min-Max Scaler.
-The Random Forest Classifier predicts whether a flood will occur and provides a confidence score.
-The result is displayed directly in the GUI.
-Future Enhancements
+---
 
-Add options to upload rainfall data from a file.
-Include graphs for visualizing historical rainfall trends.
-Support for multiple regions or datasets.
+## Visualizations
+- **Histograms**: Displayed distributions of monthly rainfall.
+- **Confusion Matrix**: Showed true positives, false positives, true negatives, and false negatives for model predictions.
+- **ROC Curve**: Illustrated the model's ability to distinguish between flood and no-flood years.
+- **Feature Importance Plot**: Highlighted the most influential rainfall features in flood prediction.
+
+---
+
+## How It Works
+1. The user enters monthly rainfall data (January–December) and the total annual rainfall into the Tkinter GUI.
+2. The input data is normalized and passed to the trained Random Forest Classifier.
+3. The model predicts whether a flood is expected and displays the result along with the confidence percentage directly in the GUI.
+
+---
+
+## Future Enhancements
+- Add options for uploading rainfall data from external files.
+- Integrate additional data sources (e.g., river levels, soil moisture) for improved predictions.
+- Build a web-based interface for broader accessibility.
+
+---
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+## References
+- **Kerala Rainfall Dataset on Kaggle**: [Link](https://www.kaggle.com/code/mukulthakur177/flood-prediction-model)
+- **Python Libraries**: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, Tkinter
